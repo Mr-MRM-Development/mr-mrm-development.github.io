@@ -1,0 +1,55 @@
+.bg-primary-1 { background: var(--primary-1); }
+.bg-primary-2 { background: var(--primary-2); }
+.bg-primary-3 { background: var(--primary-3); }
+.bg-primary-4 { background: var(--primary-4); }
+.bg-primary-5 { background: var(--primary-5); }
+
+.bg-primary-transparent-1 { background: var(--primary-transparent-1); }
+.bg-primary-transparent-2 { background: var(--primary-transparent-2); }
+.bg-primary-transparent-3 { background: var(--primary-transparent-3); }
+.bg-primary-transparent-4 { background: var(--primary-transparent-4); }
+.bg-primary-transparent-5 { background: var(--primary-transparent-5); }
+
+.bg-secondary-1 { background: var(--secondary-1); }
+.bg-secondary-2 { background: var(--secondary-2); }
+.bg-secondary-3 { background: var(--secondary-3); }
+.bg-secondary-4 { background: var(--secondary-4); }
+.bg-secondary-5 { background: var(--secondary-5); }
+
+.bg-secondary-transparent-1 { background: var(--secondary-transparent-1); }
+.bg-secondary-transparent-2 { background: var(--secondary-transparent-2); }
+.bg-secondary-transparent-3 { background: var(--secondary-transparent-3); }
+.bg-secondary-transparent-4 { background: var(--secondary-transparent-4); }
+.bg-secondary-transparent-5 { background: var(--secondary-transparent-5); }
+
+.bg-glass-1 { background: var(--glass-1); }
+.bg-glass-2 { background: var(--glass-2); }
+.bg-glass-3 { background: var(--glass-3); }
+.bg-glass-4 { background: var(--glass-4); }
+.bg-glass-5 { background: var(--glass-5); }
+
+.bg-glass-8-1 { background: var(--glass-8-1); }
+.bg-glass-8-2 { background: var(--glass-8-2); }
+.bg-glass-8-3 { background: var(--glass-8-3); }
+.bg-glass-8-4 { background: var(--glass-8-4); }
+.bg-glass-8-5 { background: var(--glass-8-5); }
+
+.bg-glass-a-1 { background: var(--glass-a-1); }
+.bg-glass-a-2 { background: var(--glass-a-2); }
+.bg-glass-a-3 { background: var(--glass-a-3); }
+.bg-glass-a-4 { background: var(--glass-a-4); }
+.bg-glass-a-5 { background: var(--glass-a-5); }
+
+.bg-glass-d-1 { background: var(--glass-d-1); }
+.bg-glass-d-2 { background: var(--glass-d-2); }
+.bg-glass-d-3 { background: var(--glass-d-3); }
+.bg-glass-d-4 { background: var(--glass-d-4); }
+.bg-glass-d-5 { background: var(--glass-d-5); }
+
+.bg-blur-2  { backdrop-filter: blur(2px);  }
+.bg-blur-4  { backdrop-filter: blur(4px);  }
+.bg-blur-6  { backdrop-filter: blur(6px);  }
+.bg-blur-8  { backdrop-filter: blur(8px);  }
+.bg-blur-12 { backdrop-filter: blur(12px); }
+.bg-blur-24 { backdrop-filter: blur(24px); }
+

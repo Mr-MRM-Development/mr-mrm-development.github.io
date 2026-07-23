@@ -1,0 +1,202 @@
+* {
+    user-select: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    text-decoration: none;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+:root {
+    --primary-1: #050505;
+    --primary-2: #101010;
+    --primary-3: #151515;
+    --primary-4: #202020;
+    --primary-5: #252525;
+
+    --secondary-1: #050525;
+    --secondary-2: #101030;
+    --secondary-3: #151535;
+    --secondary-4: #202040;
+    --secondary-5: #252545;
+    
+    --primary-transparent-1: #050505e0;
+    --primary-transparent-2: #101010e0;
+    --primary-transparent-3: #151515e0;
+    --primary-transparent-4: #202020e0;
+    --primary-transparent-5: #252525e0;
+
+    --secondary-transparent-1: #050525e0;
+    --secondary-transparent-2: #101030e0;
+    --secondary-transparent-3: #151535e0;
+    --secondary-transparent-4: #202040e0;
+    --secondary-transparent-5: #252545e0;
+    
+    --glass-1: #4545f5a0;
+    --glass-2: #6565f5a0;
+    --glass-3: #8585f5a0;
+    --glass-4: #adadf5a0;
+    --glass-5: #dadaf5a0;
+
+    --glass-8-1: #4545f580;
+    --glass-8-2: #6565f580;
+    --glass-8-3: #8585f580;
+    --glass-8-4: #adadf580;
+    --glass-8-5: #dadaf580;
+    
+    --glass-a-1: #4545f5a0;
+    --glass-a-2: #6565f5a0;
+    --glass-a-3: #8585f5a0;
+    --glass-a-4: #adadf5a0;
+    --glass-a-5: #dadaf5a0;
+    
+    --glass-d-1: #4545f5d0;
+    --glass-d-2: #6565f5d0;
+    --glass-d-3: #8585f5d0;
+    --glass-d-4: #adadf5d0;
+    --glass-d-5: #dadaf5d0;
+
+    --text-1: #ffffff;
+    --text-2: #dadaff;
+    --text-3: #bdbdff;
+    --text-4: #adadff;
+    --text-5: #8585ff;
+
+    --border-1: #ffffff;
+    --border-1: #dadada;
+    --border-1: #bababa;
+    --border-1: #adadad;
+    --border-1: #858585;
+}
+
+body {
+    background-image: url("../assets/img/background-1.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+always-on-top {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-1);
+}
+
+header .header-left {
+    text-align: left;
+    width: 25%;
+}
+
+header .header-right {
+    text-align: right;
+    width: 25%;
+}
+
+header .header-center {
+    text-align: center;
+    width: 50%;
+}
+
+header h1 {
+    font-size: 18pt;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 200;
+    cursor: pointer;
+    gap: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 20px;
+    transition: 0.3s;
+}
+
+a:hover {
+    background: var(--glass-8-5);
+    color: var(--primary-1);
+}
+
+.photo-profile {
+    width: 250px;
+    height: 250px;
+    max-width: 75%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    box-shadow: 6px 6px 6px 0 var(--glass-8-5);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.photo-profile:hover {
+    transform: scale(1.1);
+    filter: brightness(0.5);
+}
+
+.photo-profile:active {
+    transform: scale(0.95);
+    filter: brightness(0.3);
+    transition: 0.1s;
+}
+
+section#cover {
+    background: linear-gradient(to bottom, #00000000, #00000000, #000000ff);
+}
+
+section#profile {
+    background: #000000ff;
+}
+
+
+@media (max-width: 1040px) {
+    header h1 {
+        font-size: 16pt;
+    }
+}
+
+@media (max-width: 872px) {
+    .header-left, .header-right {
+        display: none;
+        width: 0%;
+    }
+
+    .header-center {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 14pt;
+    }
+
+    .navbar {
+        justify-content: left;
+        overflow-x: scroll;
+    }
+}
+
+@media (max-width: 612px) {
+    header h1 {
+        font-size: 12pt;
+    }
+}
+
+/* @media (max-width: 512px) {
+    .navbar i {
+        display: none;
+    }
+} */
