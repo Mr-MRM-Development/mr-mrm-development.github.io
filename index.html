@@ -33,16 +33,16 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav gap-2">
                         <li class="nav-item">
-                            <a class="nav-link text-light"><i class="fas fa-file"></i> Cover</a>
+                            <a class="nav-link text-light" href="#"><i class="fas fa-file"></i> Cover</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light"><i class="fas fa-user"></i> Profile</a>
+                            <a class="nav-link text-light" href="#profile"><i class="fas fa-user"></i> Profile</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light"><i class="fas fa-poll"></i> Skils</a>
+                            <a class="nav-link text-light" href="#skils"><i class="fas fa-poll"></i> Skils</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light"><i class="fas fa-diagram-project"></i> Projects</a>
+                            <a class="nav-link text-light" href="#projects"><i class="fas fa-diagram-project"></i> Projects</a>
                         </li>
                     </ul>
                 </div>
@@ -52,19 +52,196 @@
 
     <cover-section>
         <section id="cover" class="d-flex flex-column align-items-center justify-content-center gap-2 vh-100">
-            <img src="assets/img/photo-profile.png" alt="" class="photo-profile">
+            <img src="assets/img/photo-profile.png" onclick="rotateCoverPP()" class="photo-profile" id="coverPP">
             <h2 class="text-light m-0">Mohammad Rizqy Mubarok</h2>
             <span class="text-light m-0">Programmers And Development.</span>
-            <button class="btn text-light btn-primary">Read More <i class="fas fa-arrow-up-right-from-square"></i></button>
+            <a href="#profile">
+                <button class="btn text-light btn-primary">Read More <i class="fas fa-arrow-up-right-from-square"></i></button>
+            </a>
         </section>
     </cover-section>
     <profile-section>
         <section id="profile" class="p-5">
             <div class="card container bg-glass-4 border-light p-4">
-                <h1 class="card-heading text-center text-light">My Profile</h1>
+
+                <h2 class="card-heading text-center text-light mb-3">My Profile</h2>
+
+                <p class="p text-light">
+                    Hi Everyone!
+                </p>
+                <p class="p text-light">
+                    My name is Mohammad Rizqy Mubarok. 
+                    I'm currently a 12th-grade student in the Software Enginering (RPL) major, 
+                    Class 2, at SMK Syafi'i Akrom Buaran.
+                </p>
+                <p class="p text-light">
+                    My favorite programming language is JavaScript. 
+                    I especialy enjoy working with Node.JS and developming desktop application using Electron.JS.
+                </p>
+                <p class="p text-light">
+                    I look forward to working with all of you, Thank You!
+                </p>
+
+                <h3 class="mt-4 text-light underline">Detail Table</h3>
+                <table class="text-light">
+                    <tr>
+                        <td>Full Name</td>
+                        <td> : </td>
+                        <td>Mohammad Rizqy Mubarok</td>
+                    </tr>
+                    <tr>
+                        <td>School</td>
+                        <td> : </td>
+                        <td>SMK Syafi'i Akrom Buaran</td>
+                    </tr>
+                    <tr>
+                        <td>Grade & Class</td>
+                        <td> : </td>
+                        <td>Grade 12 - XII RPL 2</td>
+                    </tr>
+                    <tr>
+                        <td>Major</td>
+                        <td> : </td>
+                        <td>Software Enginering (RPL)</td>
+                    </tr>
+                    <tr>
+                        <td>Favorite Programming Language</td>
+                        <td> : </td>
+                        <td>Javascript</td>
+                    </tr>
+                    <tr>
+                        <td>Primary Runtime</td>
+                        <td> : </td>
+                        <td>Node.js</td>
+                    </tr>
+                    <tr>
+                        <td>Primary Frameworks</td>
+                        <td> : </td>
+                        <td>Electron.js</td>
+                    </tr>
+                    <tr>
+                        <td>Goal</td>
+                        <td> : </td>
+                        <td>To create OMERIZ as a balance ecosystem.</td>
+                    </tr>
+                </table>
+                <a href="#skils" class="mt-4 w-100 btn btn-primary text-light">Show Skils <i class="fas fa-poll"></i></a>
             </div>
         </section>
     </profile-section>
+    <skils-section>
+        <div class="bgi-2">
+            <section id="skils" class="p-5">
+                <div class="card container gap-3 bg-glass-2 bg-blur-4 border-light p-4">
+                    <h2 class="text-light text-center">My Skils</h2>
+                    <chart-box>
+                        <div class="chart-box p-4 card container bg-glass-3 border-light text-light" style="height: 30rem;">
+                            <div class="chart-bar">
+                                <div class="chart-persentage">65%</div>
+                                <div class="chart-progress" style="height: 65%; background: #d54525;"></div>
+                                <div class="chart-label">HTML</div>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="chart-persentage">47%</div>
+                                <div class="chart-progress" style="height: 47%; background: #2585d5;"></div>
+                                <div class="chart-label">CSS</div>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="chart-persentage">76%</div>
+                                <div class="chart-progress" style="height: 76%; background: #f5d565;"></div>
+                                <div class="chart-label">JS</div>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="chart-persentage">33%</div>
+                                <div class="chart-progress" style="height: 33%; background: #6545a5;"></div>
+                                <div class="chart-label">PHP</div>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="chart-persentage">7%</div>
+                                <div class="chart-progress" style="height: 7%;  background: #a52525;"></div>
+                                <div class="chart-label">Java</div>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="chart-persentage">37%</div>
+                                <div class="chart-progress" style="height: 37%; background: #352585;"></div>
+                                <div class="chart-label">VB.NET</div>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="chart-persentage">97%</div>
+                                <div class="chart-progress" style="height: 97%; background: #858585;"></div>
+                                <div class="chart-label">JSON</div>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="chart-persentage">26%</div>
+                                <div class="chart-progress" style="height: 26%; background: #4585d5;"></div>
+                                <div class="chart-label">Python</div>
+                            </div>
+                            <div class="chart-bar">
+                                <div class="chart-persentage">56%</div>
+                                <div class="chart-progress" style="height: 56%; background: #45a545;"></div>
+                                <div class="chart-label">Others</div>
+                            </div>
+                        </div>
+                    </chart-box>
+                    <a href="#projects" class="btn btn-primary text-light">Read My Projects <i class="fas fa-diagram-project"></i></a>
+                </div>
+            </section>
+        </div>
+    </skils-section>
+    <projects-section>
+        <div class="bgi-3">
+            <section id="projects" class="p-5">
+                <div class="card container bg-glass-8-3 gap-3 border-light p-4 bg-blur-2">
+                    <h2 class="text-light text-center">My Projects</h2>
+                    
+                    <div class="project-card card border-light bg-glass-1 p-3 align-items-center justify-content-center">
+                        <img src="assets/img/screenshoots/OMERIZ.png" class="card-img">
+                        <div class="d-flex w-100 align-items-start justify-content-center flex-column text-light gap-1">
+                            <h3>OMERIZ</h3>
+                            <p>Desktop Application Electron Based</p>
+                            <a href="https://Mr-MRM-Development.github.io/omeriz.store" class="btn btn-primary border-light">
+                                Read More <i class="fas fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card card border-light bg-glass-4 p-3 align-items-center justify-content-center">
+                        <img src="assets/img/screenshoots/Nova Store.png" class="card-img">
+                        <div class="d-flex w-100 align-items-start justify-content-center flex-column text-light gap-1">
+                            <h3>Nova Store</h3>
+                            <p>OMERIZ Application Store</p>
+                            <a href="https://Mr-MRM-Development.github.io/nova.store" class="btn btn-primary border-light">
+                                Visit Sites <i class="fas fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card card border-light bg-glass-1 p-3 align-items-center justify-content-center">
+                        <img src="assets/img/screenshoots/OMERIZ Store.png" class="card-img">
+                        <div class="d-flex w-100 align-items-start justify-content-center flex-column text-light gap-1">
+                            <h3>OMERIZ Store</h3>
+                            <p>Download OMERIZ On Here.</p>
+                            <a href="https://Mr-MRM-Development.github.io/omeriz.store" class="btn btn-primary border-light">
+                                Visit Sites <i class="fas fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card card border-light bg-glass-4 p-3 align-items-center justify-content-center">
+                        <img src="assets/img/screenshoots/FlyDrop.png" class="card-img">
+                        <div class="d-flex w-100 align-items-start justify-content-center flex-column text-light gap-1">
+                            <h3>FlyDrop</h3>
+                            <p>Shared File Via OMERIZ</p>
+                            <a href="https://Mr-MRM-Development.github.io/omeriz.store" class="btn btn-primary border-light">
+                                Download OMERIZ <i class="fas fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </projects-section>
     
     <script src="assets/bootstrap-5.3.8-dist/js/bootstrap.js"></script>
     <script type="module" src="js/main.js"></script>

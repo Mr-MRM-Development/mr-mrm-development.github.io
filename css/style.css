@@ -114,7 +114,7 @@ header h1 {
     font-size: 18pt;
 }
 
-a {
+nav a {
     text-decoration: none;
     font-weight: 200;
     cursor: pointer;
@@ -126,7 +126,7 @@ a {
     transition: 0.3s;
 }
 
-a:hover {
+nav a:hover {
     background: var(--glass-8-5);
     color: var(--primary-1);
 }
@@ -144,12 +144,12 @@ a:hover {
 }
 
 .photo-profile:hover {
-    transform: scale(1.1);
+    transform: scale(1.1) rotate(0);
     filter: brightness(0.5);
 }
 
 .photo-profile:active {
-    transform: scale(0.95);
+    transform: scale(0.95) rotate(0);
     filter: brightness(0.3);
     transition: 0.1s;
 }
@@ -163,9 +163,92 @@ section#profile {
 }
 
 
+.bgi-2 {
+    background-image: url("../assets/img/background-2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bgi-3 {
+    background-image: url("../assets/img/background-3.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+section#skils {
+    background: linear-gradient(to bottom, #000000ff, #00000000, #00000000, #050525ff);
+}
+
+section#projects {
+    background: linear-gradient(to bottom, #050525ff, #00000000, #00000000, #000000ff);
+}
+
+
+.chart-box {
+    padding: 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    overflow: scroll;
+}
+
+.chart-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 100%;
+    width: 100%;
+    justify-content: end;
+    align-items: center;
+}
+
+.chart-progress {
+    border-radius: 6px;
+    border: solid 1px var(--text-3);
+    border-bottom: solid 3px var(--text-3);
+    width: 100%;
+}
+
+.chart-persentage {
+    width: auto;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: clip;
+    min-width: 20px;
+}
+
+.chart-label {
+    width: auto;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: clip;
+    min-width: 20px;
+}
+
+.card-img {
+    width: 30%;
+    border-radius: 12px;
+    border: solid 1px var(--text-1);
+}
+
+.project-card {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
 @media (max-width: 1040px) {
     header h1 {
         font-size: 16pt;
+    }
+    .chart-persentage {
+        font-size: 8pt;
+    }
+
+    .chart-label {
+        font-size: 8pt;
     }
 }
 
@@ -186,6 +269,16 @@ section#profile {
     .navbar {
         justify-content: left;
         overflow-x: scroll;
+    }
+
+    .project-card {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .card-img {
+        width: 100%;
     }
 }
 
