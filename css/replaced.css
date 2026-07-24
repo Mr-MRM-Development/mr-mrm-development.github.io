@@ -28,6 +28,12 @@
 .bg-glass-4 { background: var(--glass-4); }
 .bg-glass-5 { background: var(--glass-5); }
 
+.bg-glass-6-1 { background: var(--glass-6-1); }
+.bg-glass-6-2 { background: var(--glass-6-2); }
+.bg-glass-6-3 { background: var(--glass-6-3); }
+.bg-glass-6-4 { background: var(--glass-6-4); }
+.bg-glass-6-5 { background: var(--glass-6-5); }
+
 .bg-glass-8-1 { background: var(--glass-8-1); }
 .bg-glass-8-2 { background: var(--glass-8-2); }
 .bg-glass-8-3 { background: var(--glass-8-3); }

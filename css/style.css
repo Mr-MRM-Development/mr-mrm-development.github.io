@@ -40,6 +40,12 @@
     --glass-4: #adadf5a0;
     --glass-5: #dadaf5a0;
 
+    --glass-6-1: #4545f560;
+    --glass-6-2: #6565f560;
+    --glass-6-3: #8585f560;
+    --glass-6-4: #adadf560;
+    --glass-6-5: #dadaf560;
+
     --glass-8-1: #4545f580;
     --glass-8-2: #6565f580;
     --glass-8-3: #8585f580;
@@ -177,12 +183,23 @@ section#profile {
     background-size: cover;
 }
 
+.bgi-4 {
+    background-image: url("../assets/img/background-4.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 section#skils {
     background: linear-gradient(to bottom, #000000ff, #00000000, #00000000, #050525ff);
 }
 
 section#projects {
     background: linear-gradient(to bottom, #050525ff, #00000000, #00000000, #000000ff);
+}
+
+section#support {
+    background: linear-gradient(to bottom, #000000ff, #00000000, #00000000, #151545ff);
 }
 
 
@@ -228,7 +245,7 @@ section#projects {
 }
 
 .card-img {
-    width: 30%;
+    width: 40%;
     border-radius: 12px;
     border: solid 1px var(--text-1);
 }
@@ -237,6 +254,41 @@ section#projects {
     display: flex;
     flex-direction: row;
     gap: 15px;
+}
+
+.support-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    overflow: scroll;
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+}
+
+.support-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: solid 1px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.support-card:hover {
+    transform: scale(1.05);
+}
+
+.card-logo img {
+    width: 250px;
+    height: auto;
+}
+
+footer {
+    background: #151545ff;
 }
 
 @media (max-width: 1040px) {
