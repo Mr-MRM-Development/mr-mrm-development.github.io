@@ -12,6 +12,31 @@
     <link rel="stylesheet" href="css/replaced.css">
 </head>
 <body>
+
+    <filter-container>
+        <svg width="0" height="0">
+            <filter id="liquid">
+                <feTurbulence 
+                    id="liquid-noise"
+                    type="fractalNoise" 
+                    baseFrequency="0.2 0.4" 
+                    numOctaves="2" 
+                    seed="2" 
+                    result="liquid-noise">
+                </feTurbulence>
+                <feDisplacementMap in="SourceGraphic" in2="liquid-noise" scale="80"/>
+            </filter>
+        </svg>
+
+        <svg style="display: none">
+            <filter id="liquid-glass" color-interpolation-filters="linearRGB" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse">
+                <feDisplacementMap in="SourceGraphic" in2="SourceGraphic" scale="20" xChannelSelector="R" yChannelSelector="B" x="0%" y="0%" width="100%" height="100%" result="displacementMap" />
+                <feGaussianBlur stdDeviation="1.5 1.5" x="0%" y="0%" width="100%" height="100%" in="displacementMap" edgeMode="none" result="blur" />
+            </filter>
+        </svg>
+    </filter-container>
+
+
     <always-on-top>
         <header class="p-3 bg-blur-4 bg-glass-a-3 border-bottom">
             <div class="header-left">
@@ -58,12 +83,14 @@
 
     <cover-section>
         <section id="cover" class="d-flex flex-column align-items-center justify-content-center gap-2 vh-100">
-            <img src="assets/img/photo-profile.png" onclick="rotateCoverPP()" class="photo-profile" id="coverPP">
-            <h2 class="text-light m-0">Mohammad Rizqy Mubarok</h2>
-            <span class="text-light m-0">Programmers And Development.</span>
-            <a href="#profile">
-                <button class="btn text-light btn-primary">Read More <i class="fas fa-arrow-up-right-from-square"></i></button>
-            </a>
+            <div class="cover-card">
+                <img src="assets/img/photo-profile.png" onclick="rotateCoverPP()" class="photo-profile" id="coverPP" style="border: solid 1px #fff;">
+                <h2 class="text-light m-0">Mohammad Rizqy Mubarok</h2>
+                <span class="text-light m-0">Programmers And Development.</span>
+                <a href="#profile">
+                    <button class="btn text-light btn-primary">Read More <i class="fas fa-arrow-up-right-from-square"></i></button>
+                </a>
+            </div>
         </section>
     </cover-section>
     <profile-section>
