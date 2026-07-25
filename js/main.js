@@ -1,21 +1,42 @@
 import "./cover.js";
+import "./liquid.js";
+import "./popup.js";
 
-// ============================================
-// LIQUID NOISE ANIMATION
-// ============================================
+function setCode(code, lang) {
+    const codePreview = document.querySelector("#codePreview");
 
-let t = 0;
-const liquidNoise = document.getElementById("liquid-noise");
+    codePreview.removeAttribute("data-highlighted");
 
-function liquidAnimate() {
-    t += 0.01;
+    for (const className of [...codePreview.classList]) {
+        if (className.startsWith("language-")) {
+            codePreview.classList.remove(className);
+        };
+    }
 
-    const x = 0.02 + Math.sin(t) * 0.01;
-    const y = 0.03 + Math.cos(t) * 0.01;
-
-    liquidNoise.setAttribute("baseFrequency", `${x}, ${y}`);
-
-    requestAnimationFrame(liquidAnimate);
+    codePreview.textContent = code;
+    codePreview.classList.add(`language-${lang}`);
+    hljs.highlightElement(codePreview);
 }
 
-liquidAnimate();
+// setCode(`
+// class Video {
+//     constructor(main) {
+//         this.main = main;
+//     }
+
+//     play(src) {
+//         const video = document.getElementById("video");
+//         video.src = src;
+//         video.play();
+//     }
+// }
+
+// // Play Video
+// const video = new Video("void");
+// video.play();
+// `, "js");
+
+
+// setTimeout(() => {
+//     setCode(`<h1 class="heading">Hello World</h1>`, "html");
+// }, 5000)

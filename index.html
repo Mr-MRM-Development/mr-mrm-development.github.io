@@ -7,6 +7,9 @@
 
     <link rel="stylesheet" href="assets/bootstrap-5.3.8-dist/css/bootstrap.css">
     <link rel="stylesheet" href="assets/Font-Awesome-7.x/css/all.css">
+    
+    <link rel="stylesheet" href="assets/highlightjs/vs2015.min.css">
+    <script src="assets/highlightjs/highlight.min.js"></script>
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/replaced.css">
@@ -68,6 +71,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light" href="#projects"><i class="fas fa-diagram-project"></i> Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="#samples"><i class="fas fa-laptop-code"></i> Samples</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light" href="#support"><i class="fas fa-cubes"></i> Supports</a>
@@ -377,6 +383,27 @@
             <h6>&copy;2026 Mohammad Rizqy Mubarok | XII RPL 2 | Mr MRM Development</h6>
         </div>
     </footer>
+
+    <pop-up-zone>
+        <pop-up>
+            <div class="popup hide" id="codeViewer">
+                <nav class="navbar">
+                    <button class="btn btn-primary px-3 py-1 text-light border-light" onclick="closePopup()">
+                        <i class="fas fa-arrow-left"></i>
+                    </button>
+                    <button class="btn btn-primary px-3 py-1 text-light border-light">
+                        <i class="fas fa-eye"></i>
+                    </button>
+                </nav>
+                <div class="code-area">
+                    <div class="code-box">
+                        <code class="code-preview" id="codePreview"></code>
+                    </div>
+                    <iframe></iframe>
+                </div>
+            </div>
+        </pop-up>
+    </pop-up-zone>
     
     <script src="assets/bootstrap-5.3.8-dist/js/bootstrap.js"></script>
     <script type="module" src="js/main.js"></script>
