@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquid Flow</title>
+
+    <style>
+        * {
+            user-select: none;
+            margin: 0;
+            color: #ffffffff;
+        }
+
+        body {
+            background-image: url("../../assets/img/background-1.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        
+        .cursor {
+            left: -100%;
+            border-radius: 50%;
+            width: 64px;
+            height: 64px;
+            background-image: url("../../assets/img/bocchi.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: absolute;
+            z-index: 9999999;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cursor" id="cursorCustom"></div>
+
+    <script>
+        
+        const cursorCustom = document.getElementById("cursorCustom");
+
+        // document.addEventListener("mouseleave")
+
+        document.querySelector("*").addEventListener("mousemove",(e)=>{
+            cursorCustom.style.left = (e.pageX + 10) + "px";
+            cursorCustom.style.top  = (e.pageY + 10) + "px";
+        });
+
+    </script>
+</body>
+</html>
