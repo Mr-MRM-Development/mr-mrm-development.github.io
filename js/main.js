@@ -1,42 +1,40 @@
 import "./cover.js";
 import "./liquid.js";
-import "./popup.js";
+import { showPopup, closePopup } from "./popup.js";
 
-function setCode(code, lang) {
-    const codePreview = document.querySelector("#codePreview");
+import {
+    CodePreview,
+    Tabs
+} from "./lib/lib-manager.js";
 
-    codePreview.removeAttribute("data-highlighted");
 
-    for (const className of [...codePreview.classList]) {
-        if (className.startsWith("language-")) {
-            codePreview.classList.remove(className);
-        };
+
+// CodePreview.loadSample("./templates/liquid-flow");
+
+const tabs = new Tabs();
+
+window.openPreview = openPreview;
+async function openPreview(source) {
+    try {
+        await tabs.setTabs("./templates/" + source);
+        await tabs.changeTab("html");
+        CodePreview.loadSample("./templates/" + source);
+        showPopup();
+    } catch (error) {
+        alert(error);
     }
-
-    codePreview.textContent = code;
-    codePreview.classList.add(`language-${lang}`);
-    hljs.highlightElement(codePreview);
 }
 
-// setCode(`
-// class Video {
-//     constructor(main) {
-//         this.main = main;
-//     }
+window.changeTab = changeTab;
+async function changeTab(opt) {
+    try {
+        await tabs.changeTab(opt);
+    } catch (error) {
+        alert(error)
+    }
+}
 
-//     play(src) {
-//         const video = document.getElementById("video");
-//         video.src = src;
-//         video.play();
-//     }
-// }
-
-// // Play Video
-// const video = new Video("void");
-// video.play();
-// `, "js");
-
-
-// setTimeout(() => {
-//     setCode(`<h1 class="heading">Hello World</h1>`, "html");
-// }, 5000)
+window.copyCode = copyCode;
+async function copyCode() {
+    tabs.copyCode();
+}

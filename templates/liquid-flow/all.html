@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquid Flow</title>
+
+    <style>
+        * {
+            user-select: none;
+            margin: 0;
+            color: #ffffffff;
+        }
+
+        body {
+            background-image: url("../../assets/img/background-1.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cover-card {
+            padding: 25px;
+            border-radius: 25px;
+            border: solid 2px #adadff80;
+            background: linear-gradient(45deg, #adadff20, #adadff20, #dadaff40, #adadff20, #adadff20);
+            backdrop-filter: url("#liquid") blur(2px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            animation: liquidAnimate 15s both infinite;
+            position: fixed;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+        }
+
+        @keyframes liquidAnimate {
+            0% {
+                scale: 1;
+            }
+            50% {
+                scale: 1.0001;
+            }
+            100% {
+                scale: 1;
+            }
+        }
+
+
+        @keyframes drift {
+            0% {
+                background-position: 50% 50%;
+            }
+            25% {
+                background-position: 60% 40%;
+            }
+            50% {
+                background-position: 40% 60%;
+            }
+            75% {
+                background-position: 55% 45%;
+            }
+            100% {
+                background-position: 50% 50%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <filter-container>
+        <svg width="0" height="0">
+            <filter id="liquid">
+                <feTurbulence 
+                    id="liquid-noise"
+                    type="fractalNoise" 
+                    baseFrequency="0.2 0.4" 
+                    numOctaves="2" 
+                    seed="2" 
+                    result="liquid-noise">
+                </feTurbulence>
+                <feDisplacementMap in="SourceGraphic" in2="liquid-noise" scale="80"/>
+            </filter>
+        </svg>
+
+        <svg style="display: none">
+            <filter id="liquid-glass" color-interpolation-filters="linearRGB" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse">
+                <feDisplacementMap in="SourceGraphic" in2="SourceGraphic" scale="20" xChannelSelector="R" yChannelSelector="B" x="0%" y="0%" width="100%" height="100%" result="displacementMap" />
+                <feGaussianBlur stdDeviation="1.5 1.5" x="0%" y="0%" width="100%" height="100%" in="displacementMap" edgeMode="none" result="blur" />
+            </filter>
+        </svg>
+    </filter-container>
+
+    <div class="cover-card">
+        <h1>Hello World</h1>
+        <span>This A Good Samples</span>
+    </div>
+
+    <script>
+        
+        let t = 0;
+        const liquidNoise = document.getElementById("liquid-noise");
+
+        function liquidAnimate() {
+            t += 0.01;
+
+            const x = 0.02 + Math.sin(t) * 0.01;
+            const y = 0.03 + Math.cos(t) * 0.01;
+
+            liquidNoise.setAttribute("baseFrequency", `${x}, ${y}`);
+
+            requestAnimationFrame(liquidAnimate);
+        }
+
+        liquidAnimate();
+
+    </script>
+</body>
+</html>

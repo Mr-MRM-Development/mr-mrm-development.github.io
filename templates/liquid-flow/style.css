@@ -1,0 +1,62 @@
+* {
+    user-select: none;
+    margin: 0;
+    color: #ffffffff;
+}
+
+body {
+    background-image: url("./assets/img/background-1.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cover-card {
+    padding: 25px;
+    border-radius: 25px;
+    border: solid 2px #adadff80;
+    background: linear-gradient(45deg, #adadff20, #adadff20, #dadaff40, #adadff20, #adadff20);
+    backdrop-filter: url("#liquid") blur(2px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    animation: liquidAnimate 15s both infinite;
+}
+
+@keyframes liquidAnimate {
+    0% {
+        scale: 1;
+    }
+    50% {
+        scale: 1.0001;
+    }
+    100% {
+        scale: 1;
+    }
+}
+
+
+@keyframes drift {
+    0% {
+        background-position: 50% 50%;
+    }
+    25% {
+        background-position: 60% 40%;
+    }
+    50% {
+        background-position: 40% 60%;
+    }
+    75% {
+        background-position: 55% 45%;
+    }
+    100% {
+        background-position: 50% 50%;
+    }
+}

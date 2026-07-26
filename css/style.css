@@ -202,6 +202,10 @@ section#support {
     background: linear-gradient(to bottom, #000000ff, #00000000, #00000000, #151545ff);
 }
 
+section#samples {
+    background: linear-gradient(to bottom, #000000ff, #00000000, #00000000, #000000ff);
+}
+
 
 .chart-box {
     padding: 12px;
@@ -315,6 +319,7 @@ section#support {
     background: #000;
     border-radius: 12px;
     border: solid 1px #adadff;
+    overflow: scroll;
 }
 
 .code-preview {
@@ -323,6 +328,7 @@ section#support {
     overflow: scroll;
     background: #000;
     white-space: pre;
+    user-select: text;
 }
 
 .code-area iframe {
@@ -411,6 +417,19 @@ footer {
     background: #151545ff;
 }
 
+.preview-card {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.sample-preview {
+    width: 50%;
+    height: 300px;
+    border-radius: 12px;
+    border: solid 1px #adadff;
+}
+
 @media (max-width: 1040px) {
     header h1 {
         font-size: 16pt;
@@ -454,6 +473,14 @@ footer {
     }
 
     .code-area {
+        flex-direction: column;
+    }
+
+    .sample-preview {
+        width: 100%;
+    }
+
+    .preview-card {
         flex-direction: column;
     }
 }

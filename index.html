@@ -337,6 +337,37 @@
             </section>
         </div>
     </projects-section>
+    
+    <samples-section>
+        <div class="bgi-2">
+            <section id="samples" class="p-5">
+                <div class="card container bg-glass-8-2 gap-3 border-light p-4 bg-blur-2">
+                    <h2 class="text-light text-center">My Samples</h2>
+
+                    <div class="preview-card card d-flex align-items-center justify-content-center container gap-3 bg-glass-2 bg-blur-4 border-light p-4">
+                        <iframe src="./templates/dockbar/all.html" class="sample-preview"></iframe>
+                        <div class="d-flex flex-column gap-2 align-items-center justify-content-center w-50">
+                            <h3 class="text-light">Dockbar</h3>
+                            <button class="btn btn-primary text-light border-1 border-light" onclick="openPreview('dockbar')">
+                                <i class="fas fa-code"></i> Preview Code
+                            </button>
+                        </div>
+                    </div>
+                    <div class="preview-card card d-flex align-items-center justify-content-center container gap-3 bg-glass-2 bg-blur-4 border-light p-4">
+                        <iframe src="./templates/liquid-flow/all.html" class="sample-preview"></iframe>
+                        <div class="d-flex flex-column gap-2 align-items-center justify-content-center w-50">
+                            <h3 class="text-light">Liquid Flow</h3>
+                            <button class="btn btn-primary text-light border-1 border-light" onclick="openPreview('liquid-flow')">
+                                <i class="fas fa-code"></i> Preview Code
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </samples-section>
+
     <support-section>
         <div class="bgi-4">
             <section id="support" class="p-5">
@@ -394,12 +425,24 @@
                     <button class="btn btn-primary px-3 py-1 text-light border-light">
                         <i class="fas fa-eye"></i>
                     </button>
+                    <button class="btn btn-primary px-3 py-1 text-light border-light">
+                        <i class="fas fa-copy" onclick="copyCode()"></i>
+                    </button>
+                    <button class="btn btn-primary px-3 py-1 text-light border-light" onclick="changeTab('html')">
+                        <i class="fab fa-html5"></i> HTML
+                    </button>
+                    <button class="btn btn-primary px-3 py-1 text-light border-light" onclick="changeTab('css')">
+                        <i class="fab fa-css3"></i> CSS
+                    </button>
+                    <button class="btn btn-primary px-3 py-1 text-light border-light" onclick="changeTab('js')">
+                        <i class="fab fa-js"></i> JS
+                    </button>
                 </nav>
                 <div class="code-area">
                     <div class="code-box">
                         <code class="code-preview" id="codePreview"></code>
                     </div>
-                    <iframe></iframe>
+                    <iframe id="appFrame"></iframe>
                 </div>
             </div>
         </pop-up>

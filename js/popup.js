@@ -1,4 +1,5 @@
 window.closePopup = closePopup;
+window.showPopup  = showPopup;
 
 const popup = document.querySelector(".popup");
 
@@ -9,3 +10,5 @@ function closePopup() {
 function showPopup() {
     popup.classList.remove("hide")
 }
+
+export { showPopup, closePopup };

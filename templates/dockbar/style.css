@@ -1,0 +1,105 @@
+* {
+    user-select: none;
+    margin: 0;
+}
+
+* button {
+    cursor: pointer;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background-image: url("./assets/img/background-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.tailbar {
+    position: fixed;
+    bottom: 12px;
+    margin: 0 auto;
+    transform: translate(-50%);
+    left: 50%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    border: solid 2px #85a5ff;
+    border-radius: 15px;
+    background: #8585ff80;
+    z-index: 999999;
+    padding: 6px 12px;
+    gap: 6px;
+}
+
+#taskbar {
+    /* width: 70%; */
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+}
+
+.tailbar button {
+    background: none;
+    border: none;
+    border-radius: 6px;
+    transition: 0.3s;
+    margin: 0 3px;
+    padding: 3px;
+	cursor: pointer;
+    position: relative;
+}
+
+.tailbar:hover button {
+    opacity: 0.4;
+    margin: 0 6px;
+}
+
+.tailbar button img,
+.tailbar button iframe
+{
+    width: 30px;
+    height: 30px;
+    border: none;
+}
+
+.tailbar button:hover{
+    z-index: 999;
+    /* transform: translateY(-10px) scale(1.5); */
+    opacity: 1;
+}
+
+.tailbar button .hitbox {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.tailbar button .solider {
+    width: 60%;
+    background: #dadaff;
+    border-radius: 2px;
+    height: 4px;
+    margin: auto;
+    transition: 0.3s;
+    transform: scaleX(0);
+}
+
+.tailbar button:hover .solider {
+   transform: scaleX(1);
+}
+
+.tailbar .sparator {
+    border: solid 1px #adadff;
+    height: 30px;
+    margin: 0 3px;
+    margin-bottom: 5px;
+}
